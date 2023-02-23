@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { resetCardState } from '../../Context/cardSlice';
 import { resetBalance } from '../../Context/balanceSlice';
+import { resetAuthState } from '../../Context/authSlice';
 
 export const BalancePage = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,9 @@ export const BalancePage = () => {
   }
 
   const handleOnExit = () => {
+    dispatch(resetBalance());
     dispatch(resetCardState());
+    dispatch(resetAuthState());
     navigate('/');
   }
 

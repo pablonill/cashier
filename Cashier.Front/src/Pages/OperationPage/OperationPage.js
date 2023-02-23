@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBalanceAsync } from '../../Context/balanceSlice';
 import { resetCardState } from '../../Context/cardSlice';
+import { resetAuthState } from '../../Context/authSlice';
+import { resetBalance } from '../../Context/balanceSlice';
 
 export const OperationPage = () => {
   const navigate = useNavigate();
@@ -15,13 +17,18 @@ export const OperationPage = () => {
   }
 
   const handleOnExit = () => {
+    dispatch(resetAuthState());
     dispatch(resetCardState());
     navigate('/');
   }
   
   useEffect(() => {
-    if (balanceState && !balanceState.isLoading && !balanceState.isError && balanceState.data) {
+    if (!balanceState.isLoading && !balanceState.isError && balanceState.data) {
       navigate('/balance', { state: balanceState.data });
+    }
+
+    if (!balanceState.isLoading && balanceState.isError) {
+      navigate('error', { state: { message: balanceState.message, resetCallback: resetBalance() } });
     }
   }, [balanceState, navigate]);
 

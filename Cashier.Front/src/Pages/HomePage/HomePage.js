@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NumericKeyboard } from '../../Components/Keyboard/NumericKeyboard';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { validateCardAsync } from '../../Context/cardSlice';
+import { validateCardAsync, resetCardState } from '../../Context/cardSlice';
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -16,12 +16,12 @@ export const HomePage = () => {
   }
 
   useEffect(() => {
-    if (cardState && cardState.data?.cardNumber && !cardState.isError) {
+    if (cardState.data && !cardState.isLoading && !cardState.isError) {
       navigate('pin', { state: { cardNumber } } );
     }
 
-    if (cardState && cardState.isError) {
-      navigate('error', { state: { message: cardState.message } });
+    if (!cardState.isLoading && cardState.isError) {
+      navigate('error', { state: { message: cardState.message, resetCallback: resetCardState() } });
     }
   }, [cardState, navigate, cardNumber]);
 

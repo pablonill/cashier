@@ -4,7 +4,7 @@ import { NumericKeyboard } from '../../Components/Keyboard/NumericKeyboard';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetCardState } from '../../Context/cardSlice';
-import { loginAsync } from '../../Context/authSlice';
+import { loginAsync, resetAuthState } from '../../Context/authSlice';
 
 export const PinPage = () => {
   const dispatch = useDispatch();
@@ -19,16 +19,17 @@ export const PinPage = () => {
   }
 
   useEffect(() => {
-    if (authState.data.token) {
+    if (!authState.isLoading && !authState.isError && authState.data) {
       navigate('/operations');
     }
 
-    if (authState.isError) {
-      navigate('/error', { state: { message: authState.message } });
+    if (!authState.isLoading && authState.isError) {
+      navigate('/error', { state: { message: authState.message, resetCallback: resetAuthState() } });
     }
   });
 
   const handleOnExit = () => {
+    dispatch(resetAuthState());
     dispatch(resetCardState());
     navigate('/');
   }

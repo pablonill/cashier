@@ -2,12 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import { CashierApi } from '../Api/CashierApi';
 
 const INITIAL_STATE = {
+  isLoading: false,
   isError: false,
   message: null,
-  data: {
-    cardNumber: null,
-    isLocked: false,
-  },
+  data: null,
 }
 
 export const cardSlice = createSlice({
@@ -25,6 +23,9 @@ export const cardSlice = createSlice({
     },
     resetCardState: (state) => {
       state.values = INITIAL_STATE;
+    },
+    setCardLoading: (state, action) => {
+      state.values.isLoading = action.payload;
     }
   },
 })
@@ -34,14 +35,17 @@ export const cardSlice = createSlice({
 export const validateCardAsync = (cardNumber) => {
   return async (dispatch) => {
     try {
+      dispatch(setCardLoading(true));
       const { data } = await CashierApi.get('/api/card/' + cardNumber + '/validate');
       dispatch(setCardState(data));
+      dispatch(setCardLoading(false));
     } catch (error) {
       const data = error.response.data;
       dispatch(setCardError(data));
+      dispatch(setCardLoading(false));
     }
   }
 }
 
-export const { setCardState, resetCardState, setCardError } = cardSlice.actions;
+export const { setCardState, resetCardState, setCardError, setCardLoading } = cardSlice.actions;
 export default cardSlice.reducer

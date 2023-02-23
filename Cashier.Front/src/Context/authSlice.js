@@ -2,12 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import { CashierApi } from '../Api/CashierApi';
 
 const INITIAL_STATE = {
+  isLoading: false,
   isError: false,
   message: "",
-  data: {
-    cardNumber: "",
-    token: null,
-  },
+  data: null,
 }
 
 export const authSlice = createSlice({
@@ -17,7 +15,7 @@ export const authSlice = createSlice({
     setAuth: (state, action) => {
       state.values = action.payload;
     },
-    setCardError: (state, action) => {
+    setAuthError: (state, action) => {
       state.values.isError = action.payload.isError;
       state.values.message = action.payload.message;
     },
@@ -25,6 +23,9 @@ export const authSlice = createSlice({
       state.values = INITIAL_STATE;
       CashierApi.defaults.headers.common['Authorization'] = '';
     },
+    setAuthLoading: (state, action) => {
+      state.values.isLoading = action.payload;
+    }
   },
 })
 
@@ -36,16 +37,19 @@ export const loginAsync = (cardNumber, pinNumber) => {
         PinNumber: pinNumber,
       }
   
+      dispatch(setAuthLoading(true));
       const response = await CashierApi.post('/auth', body);
       const { data } = response;
       CashierApi.defaults.headers.common['Authorization'] = `Bearer ${data.data.token}`;
       dispatch(setAuth(data));
+      dispatch(setAuthLoading(false));
     } catch (error) {
       const data = error.response.data;
-      dispatch(setCardError(data));
+      dispatch(setAuthError(data));
+      dispatch(setAuthLoading(false));
     }
   }
 }
 
-export const { setAuth, resetAuthState, setCardError } = authSlice.actions;
+export const { setAuth, resetAuthState, setAuthError, setAuthLoading } = authSlice.actions;
 export default authSlice.reducer;

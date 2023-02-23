@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z62Rzr393CFiS/vI3wffMLz8xFyeW90Ju6uOdQDWUF7fsVQ8itPU1xzJXm4PfyS23MZP4NzRjAn+kTcTwIX8aQ==",
+  "dgSpecHash": "FEc3hGwO0GqMKylfBxO5HKrTRtftlSUm9Orq2zYWzNPT3EhaJuvb3KG6tkFCoe5PzjKURoV9algG/gvOHndkvQ==",
   "success": true,
-  "projectFilePath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

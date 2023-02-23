@@ -1,8 +1,5 @@
 ﻿using Application.Services.Auth;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
-using System.Reflection.Metadata.Ecma335;
 using WebAPI.DTO;
 using WebAPI.DTO.Auth;
 

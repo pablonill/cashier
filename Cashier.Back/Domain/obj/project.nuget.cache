@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mk9XaJFnhJoGCzsjlFX2u3CDwG/jXcBjoT97J3GGZxB1jEpBY6m+yf4/OVJwomApQsypuZyLRkl8mmByVSXluw==",
+  "dgSpecHash": "4GmLLEEM9SMl9h47ai/l+S3DITm2u7vrLw9aeBfoMcZ2EL4h3P16o8CWfK64TbpPG1gxLO+WH8cRMcLecKNYww==",
   "success": true,
-  "projectFilePath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -3963,11 +3963,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Infrastructure\\obj\\",
+      "outputPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3984,8 +3984,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj": {
-              "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj"
+            "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj": {
+              "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj"
             }
           }
         }

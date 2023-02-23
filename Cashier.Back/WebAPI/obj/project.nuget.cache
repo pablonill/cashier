@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OjOHXDijnCUxoPvemEfbkqzATiVp+BrJrveft1DKYVof6qfVpGSmMyPnAY10A60Tn/a9bYBh5/RvSyE8nAEN0A==",
+  "dgSpecHash": "hsxfsrSpKb0YwlRxX+nGppkRlRlqh/0h+/0/kE0aVYqgXcaPjHUfX3+JdaU+jwrLIMdWkhir06+PNOodD1yjqw==",
   "success": true,
-  "projectFilePath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

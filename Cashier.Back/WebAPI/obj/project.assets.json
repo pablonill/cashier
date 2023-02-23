@@ -4428,11 +4428,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\WebAPI\\obj\\",
+      "outputPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4449,11 +4449,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj": {
-              "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj"
+            "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj": {
+              "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj"
             },
-            "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj"
+            "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj": {}
+    "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj": {
+    "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\Application.csproj",
+        "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Application\\obj\\",
+        "outputPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\Domain.csproj"
+              "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\Domain.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\Domain.csproj": {
+    "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\Domain.csproj",
+        "projectPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Ejercicios\\Challenge\\Cashier\\Cashier.Back\\Domain\\obj\\",
+        "outputPath": "D:\\source\\Ejercicios\\Challenge\\Remote\\cashier\\Cashier.Back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",

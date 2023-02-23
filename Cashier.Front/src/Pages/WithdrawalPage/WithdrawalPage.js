@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { NumericKeyboard } from '../../Components/Keyboard/NumericKeyboard';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { withDrawalAsync } from '../../Context/withDrawalSlice';
+import { withDrawalAsync, resetWithDrawal } from '../../Context/withDrawalSlice';
+import { resetBalance } from '../../Context/balanceSlice';
+import { resetAuthState } from '../../Context/authSlice';
+import { resetCardState } from '../../Context/cardSlice';
 
 export const WithDrawalPage = () => {
   const dispatch = useDispatch();
@@ -17,9 +20,21 @@ export const WithDrawalPage = () => {
     dispatch(withDrawalAsync(number));
   }
 
+  const handleOnExit = () => {
+    dispatch(resetAuthState());
+    dispatch(resetCardState());    
+    dispatch(resetBalance());
+    dispatch(resetWithDrawal());
+    navigate('/');
+  }
+
   useEffect(() => {
-    if (withDrawalState && !withDrawalState.isLoading && !withDrawalState.isError && withDrawalState.data) {
-      navigate('/report', { state: { withDrawalState, amount } } );
+    if (!withDrawalState.isLoading && !withDrawalState.isError && withDrawalState.data) {
+      navigate('/report', { state: { data: withDrawalState.data, amount: amount, resetCallback: resetWithDrawal() } } );
+    }
+
+    if (!withDrawalState.isLoading && withDrawalState.isError) {
+      navigate('error', { state: { message: withDrawalState.message, resetCallback: resetWithDrawal() } });
     }
   }, [withDrawalState, navigate, amount]);
 
@@ -29,7 +44,7 @@ export const WithDrawalPage = () => {
       <NumericKeyboard mask={'###.###.###'} separator={'.'} onEnter={handleOnEnter}></NumericKeyboard>
       <div className='row'>
         <ButtonGroup>
-          <Button variant="light" onClick={() => navigate('/')}>
+          <Button variant="danger" onClick={() => handleOnExit()}>
             Exit
           </Button>
         </ButtonGroup>

@@ -3,8 +3,6 @@ import { Alert } from 'react-bootstrap';
 import { ButtonGroup, Button } from 'react-bootstrap';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { resetCardState } from '../../Context/cardSlice';
-import { resetAuthState } from '../../Context/authSlice';
 
 export const ErrorPage = () => {
   const dispatch = useDispatch();
@@ -12,8 +10,8 @@ export const ErrorPage = () => {
   const navigate = useNavigate();
 
   const handleBackNavigate = () => {
-    dispatch(resetCardState());
-    dispatch(resetAuthState());
+    dispatch(state.resetCallback);
+
     navigate(-1);
   }
 
