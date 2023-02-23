@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "5d55a504-6bb7-4208-a99e-cbcd760e562c",
+		"name": "Chashier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1825476"
+	},
+	"item": [
+		{
+			"name": "Card",
+			"item": [
+				{
+					"name": "Validate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5124/api/card/7777333399995555/validate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5124",
+							"path": [
+								"api",
+								"card",
+								"7777333399995555",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CardNumber\": \"777733339999555\",\r\n    \"PinNumber\": 1234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5124/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5124",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Operations",
+			"item": [
+				{
+					"name": "GetBalance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Nzc3MzMzMzk5OTk1NTUiLCJleHAiOjE2NzcxNjczNjIsImlzcyI6IkNhc2hpZXIifQ.42U7S-dFc-FCQ-de0mfkf5-ouIYqUDJMqBrsYhLsptw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5124/api/operation/balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5124",
+							"path": [
+								"api",
+								"operation",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WithDrawl",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Nzc3MzMzMzk5OTk1NTUiLCJleHAiOjE2NzcxNjkyMjYsImlzcyI6IkNhc2hpZXIifQ.Lic36ozb0CDvSjOeUUAFUUyfZJlarkb2GBGdOiL6-yg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Amount\": 130\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5124/api/operation/withdrawal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5124",
+							"path": [
+								"api",
+								"operation",
+								"withdrawal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
